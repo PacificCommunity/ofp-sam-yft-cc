@@ -32,18 +32,23 @@
 2. We have compared the swordfish 2017 refcase doitall and Nicks' swordfish CC
    solution phase file to isolate the CC flags. See:
    https://github.com/PacificCommunity/ofp-sam-mfcl-school/blob/main/tutorial_1_ccond/swo2017_arni/README.md.
-   When we paste these CC flags into the yellowfin diagnostic model doitall, we
-   get the following error:
-   ```
-   icount = 7
-   icount = 7
-   icount = 7
-   Fish not conserved -- Excess fishing mortality penalty =
-   1.5766052167337300e+12
-   Avoided move
-   this option not implemented for implicit catchability
-   ```
+   When we paste these CC flags into the yellowfin diagnostic model doitall and
+   replace the original executable (2.0.7.0) with new (2.0.8.4 from 2022_02_23),
+   we get the following error:
 
+```
+Making a copy of an unallocated dvector
+Making a copy of an unallocated dvector
+Making a copy of an unallocated dvector
+making a copy of an unallocated age_length_record_array
+Making a copy of an unallocated dvector
+Making a copy of an unallocated dvector
+Making a copy of an unallocated dvector
+Making a copy of an unallocated dvector
+ initial_tag_year(2) 194
+Bounds error reading pmature(1) in par file
+ value is 0
+```
 3. How do we enable the self-scaling multinomial to get appropriate sample size?
 
 <!-- 4. The swordfish refcase doitall runs into an error in phase 10: line 296 if [] -->
