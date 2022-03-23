@@ -24,17 +24,19 @@
 
 # Questions
 
-1. The yellowfin diagnostic model doitall seems to stop between phases. When we
-   run doitall for the first time, it creates 00.par and stops. If we run
-   it again, it creates 01.par and stops. If we run it again, it starts phase 2.
-   Is this the expected behavior, given the content of the script?
+1. The yellowfin [01_diagnostic](01_diagnostic) model doitall seems to stop
+   between phases. When we run doitall for the first time, it creates 00.par and
+   stops. If we run it again, it creates 01.par and stops. If we run it again,
+   it starts phase 2. Is this the expected behavior, given the content of the
+   script?
 
 2. We have compared the swordfish 2017 refcase doitall and Nicks' swordfish CC
    solution phase file to isolate the CC flags. See:
    https://github.com/PacificCommunity/ofp-sam-mfcl-school/blob/main/tutorial_1_ccond/swo2017_arni/README.md.
-   When we paste these CC flags into the yellowfin diagnostic model doitall and
-   replace the original executable (2.0.7.0) with new (2.0.8.4 from 2022_02_23),
-   we get the following error:
+   In the yellowfin [03_cc_flags](03_cc_flags) folder we have pasted these CC
+   flags into the yellowfin diagnostic model doitall and also replaced the
+   original executable (2.0.7.0) with new (2.0.8.4 from 2022_02_23). However, we
+   get the following error:
 
 ```
 Making a copy of an unallocated dvector
