@@ -97,7 +97,7 @@ if [ ! -f 01.par ]; then
 # Selectivity settings
 #
 
- -999 3 37	   # all selectivities equal for age class 25 and older
+ -999 3 39	   # all selectivities equal for age class 25 and older
  -999 26 2         # sets length-dependent selectivity option
  -999 57 3	   # uses cubic spline selectivity
  -999 61 5         # with 5 nodes for cubic spline
@@ -176,15 +176,15 @@ if [ ! -f 01.par ]; then
   -11 75 2
   -29 75 2
 
-  -17 16 2 -17 3 12          # Forcing selectivity to zero for large fish in the small MISC fisheries
-  -23 16 2 -23 3 12
-  -28 16 2 -28 3 12
-  -32 16 2 -32 3 12
-  -24 16 2 -24 3 12		#PS PH ID weird bump at 110 cm
+  -17 16 2 -17 3 39          # Forcing selectivity to zero for large fish in the small MISC fisheries
+  -23 16 2 -23 3 39
+  -28 16 2 -28 3 39
+  -32 16 2 -32 3 39
+  -24 16 2 -24 3 39		#PS PH ID weird bump at 110 cm
   # -19 16 2 -19 3 24          # And also for the PL fisheries
-  -20 16 2 -20 3 24
-  -21 16 2 -21 3 24
-  -22 16 2 -22 3 24
+  -20 16 2 -20 3 39
+  -21 16 2 -21 3 39
+  -22 16 2 -22 3 39
 
 # Set first age class for PS and PL fisheries to 0 so as not to have weird recruitment distributions
   -13 75 1
@@ -338,6 +338,7 @@ if [ ! -f 01.par ]; then
  #-39 66 1
  #-40 66 1
  #-41 66 1
+ 2 188 2 
 PHASE1
   exit
 fi
