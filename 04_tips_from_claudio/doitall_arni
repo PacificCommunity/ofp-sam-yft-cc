@@ -2,15 +2,14 @@
 # cd $_CONDOR_SCRATCH_DIR
 # export PATH=.:$PATH
 # export ADTMP1=.
-MFCL=./mfclo64
 
 #  ------------------------
 #  PHASE 0 - create initial par file
 #  ------------------------
 #
 if [ ! -f 00.par ]; then
- $MFCL yft.frq yft.ini 00.par -makepar
-  exit
+ ./mfclo64 yft.frq yft.ini 00.par -makepar
+
 fi
 
 ###
@@ -19,7 +18,7 @@ fi
 #  ------------------------
 #
 if [ ! -f 01.par ]; then
- $MFCL yft.frq 00.par 01.par -file - <<PHASE1
+ ./mfclo64 yft.frq 00.par 01.par -file - <<PHASE1
 # Arni and Jemery experiment with catch-conditioned flags
 # Based on Nick's swordfish example
 # (https://github.com/PacificCommunity/ofp-sam-mfcl-school/blob/main/tutorial_1_ccond/swo2017_arni/README.md)
